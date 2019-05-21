@@ -1,0 +1,43 @@
+.Product {
+    display: inline-block;
+    padding: 40px 5px 100px
+}
+.Product:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.pro_list li {
+    width: 48%;
+    background: #f8f8f8;
+    float: left;
+    margin: 10px 1% 0px 1%;
+    box-shadow: 0 0px 1px 0 #999;
+}
+.pro_list .product-img {
+    height: 150px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-img img {
+    height: 150px;
+    width: 180px;
+
+}
+
+
+.pro_list p, .tc_list p {
+    height: 24px;
+    line-height: 24px;
+    text-indent: 3px;
+    color: #333;
+    font-size: 12px;
+}
+.pro_list p span {
+    color: red;
+}

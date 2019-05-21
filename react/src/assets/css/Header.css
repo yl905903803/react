@@ -1,0 +1,37 @@
+.Header {
+    width: 100%;
+    height: 44px;
+    background: #EC6941;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+.Header h1 {
+    font-size: 18px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    letter-spacing: 2px;
+}
+.Header .right_btns {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    color: white;
+    border-radius: 3px;
+    background:url(../img/buycar.png) no-repeat 15px 5px;
+}
+
+
+
+
+

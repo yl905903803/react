@@ -1,0 +1,56 @@
+.nine_grid {
+    margin: 10px auto;
+    padding: 10px 0;
+    background: white;
+    overflow: hidden;
+}
+
+.nine_grid li {
+    width: 25%;
+    float: left;
+}
+.nine_grid li a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+.Img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: url(../img/im1.png) no-repeat;
+}
+.nine_grid li p {
+    height: 30px;
+    line-height: 30px;
+}
+
+.tabs1 {
+    background: #f0f0f0;
+    height: 50px;
+    overflow: hidden;
+}
+
+.tabs1 li {
+    width: 33.33%;
+    height: 50px;
+    float: left;
+}
+
+
+.tabs1 li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #444;
+    box-shadow: 0 -2px 0 0 #aaa inset;
+    font-size: 16px;
+}
+
+.tabs1 li .app-nav-active{
+    box-shadow: 0 -2px 0 0 #EC6941 inset;
+    color: #EC6941;
+}
+.Home{padding: 44px 0 94px;}

@@ -1,0 +1,82 @@
+.login{
+    margin: 0 auto;
+    max-width: 414px;
+    min-height: 100%;
+    overflow-x: hidden;
+    background: #EBE9EC;
+    padding: 44px 0 100px;
+}
+
+.log_banner{
+    border: none;
+    vertical-align: middle;
+    max-width: 100%;
+    height: 270px;
+    background:url(../img/dog.png) no-repeat;
+}
+
+.login form {
+    width: 80%;
+    margin: 30px auto;
+}
+.login form div {
+    margin-bottom: 10px;
+    position: relative;
+}
+.login form label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #c9a063;
+}
+.login form div input[type="text"] {
+    width: 100%;
+    height: 40px;
+    line-height: 44px;
+    text-indent: 46px;
+    border: none;
+    border-bottom: 1px solid #EC6941;
+    background: none;
+    outline: none;
+}
+.wj {
+    text-align: right;
+}
+.login form div.dl a, .login form div.qx a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background: #EC6941;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+.dl{    margin-top: 35px;}
+.qx{    margin-top: 10px;}
+.label1{
+    background: url(../img/user1.png) no-repeat 10px;
+}
+.label2{
+    background: url(../img/lock.png) no-repeat 10px;
+}
+.label3{
+    background: url(../img/yzm.png) no-repeat 10px;
+}
+.login form div input[type="button"] {
+    border: none;
+    background: #ccc;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 5px;
+}

@@ -1,0 +1,61 @@
+.Detail{
+    padding: 44px 0 100px;
+  
+}
+
+.Detail li {
+    position: relative;
+    background: #ddd;
+}
+.bgwhite {
+    background-image: none!important;
+    float: left;
+    width: 100%;
+}
+.Detail li a {
+    display: block;
+    height: 90px;
+    padding: 10px;
+    overflow: hidden;
+}
+.Detail li img {
+    height: 86px;
+    width: 86px;
+    vertical-align: top;
+    padding: 2px;
+    background: white;
+    box-shadow: 0 0 0 1px #ddd;
+    float: left;
+}
+.Detail li div {
+    width: calc(90% - 100px);
+    height: 90px;
+    float: left;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+
+.Detail li h3 {
+    height: 30px;
+    color: #000;
+    font-size: 16px;
+}
+.Detail li p {
+    height: 30px;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.Detail li p span {
+    color: #EC6941;
+}
+.nav{position:fixed;top:0;left:0; background:#ffffff; border-bottom:1px solid #e8eaec; z-index:999;}
+.nav ul{width:45px;height:30px; padding-top:13px; margin:0 auto;}
+.nav ul li{width:20px;height:30px; background:url(../img/history.png) no-repeat 0 0; background-size:100%; margin:0 0 0 5px;}
+
+.cont .text-box{ font: 500 16px/24px "";text-indent: 26px;  color:#8484ff;}
+.text-box p{ line-height:0.45rem; margin-bottom:0.1rem;}

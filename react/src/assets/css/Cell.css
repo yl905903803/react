@@ -1,0 +1,60 @@
+.cell{    padding: 0 0 10px;
+    line-height: 26px;
+    color: #666;
+background: #f0f0f0}
+
+.cell-list{
+        display: block;
+        height: 90px;
+        padding: 10px;
+        overflow: hidden;
+        background: #ddd;
+}
+
+.cell-list img{
+    height: 86px;
+    width: 86px;
+    vertical-align: top;
+    padding: 2px;
+    background: white;
+    box-shadow: 0 0 0 1px #ddd;
+    float: left;
+   
+}
+.cell-list div {
+    width: calc(90% - 100px);
+    height: 90px;
+    float: left;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.cell-list div h3{
+    height: 30px;
+    color: #000;
+    font-size: 16px;
+}
+
+.service_time {
+    height: 30px;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.service_time span{
+    color:#EC6941;
+}
+.service_price span{
+    color:#EC6941;
+}
+.service_price{
+    height: 30px;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
