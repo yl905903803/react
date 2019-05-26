@@ -8,6 +8,7 @@ import Hospital from "./Hospital"
 import axios from "axios";
 
 
+
 export default class Home extends React.Component{
   
     render(){

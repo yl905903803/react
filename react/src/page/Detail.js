@@ -2,14 +2,16 @@ import React from "react";
 import "../assets/css/Detail.css";
 import axios from 'axios';
 import querystring from 'query-string'
+import propTypes from "prop-types";
+import {action1} from "../store/action";
+import connect from "react-redux/es/connect/connect";
 
+ class Detail extends React.Component{
+    
 
-export default class Detail extends React.Component{
-    state={
-        data:{}
-      }
+      
     render(){
-        let data = this.state.data;
+        let data = this.props.data;
         return (
             <div className="Detail">
                 <div className="nav">
@@ -36,10 +38,24 @@ export default class Detail extends React.Component{
             </div>
         )
     }
-    async componentDidMount(){
+     componentDidMount(){
         let id = this.props.match.params.id;
         let dataName = querystring.parse(this.props.location.search).dataName;
-        let res = await axios({url:`/mock/${dataName}/${id}`});
-        this.setState({data:res.data.page_data})
+        this.props.get({url:`/mock/${dataName}/${id}`,params:{limit:10},typename: 'UPDATE_DETAIL'})
       }
 }
+
+const initMapStateToProps=state=>({
+  data:state.detail,
+});
+
+const initMapDispatchToProps=dispatch=>({
+  get:({url,params,typename})=>dispatch(action1({
+    dispatch,url,params,typename
+  }))
+});
+
+export default connect(
+  initMapStateToProps,
+  initMapDispatchToProps
+)(Detail)

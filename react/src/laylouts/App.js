@@ -12,13 +12,40 @@ import Detail from '../page/Detail';
 import Header from "./Header";
 import Footer from "./Footer";
 import AuthRoute from "../guard/Auth";
+import Loading from "../components/Loading";
+import {action1} from "../store/action";
+import connect from "react-redux/es/connect/connect";
 
+ class App extends React.Component{
+  componentWillReceiveProps(nextProps){
+    let path = nextProps.location.pathname;
+    this.checkRoute(path);
+  }
+  componentDidMount(){
+    let path = this.props.location.pathname;
+    this.checkRoute(path);
+  }
 
-export default class App extends React.Component{
+  checkRoute = (path) => {
+
+    let {viewNav,viewFoot} = this.props;
+    if (/home|service|product|user/.test(path)){
+      viewNav(true);viewFoot(true);
+    }
+    if (/login|reg|detail/.test(path)){
+      viewNav(false);viewFoot(false);
+    }
+  
+  };
+
+    
+     
     render(){
+      let {bNav,bFoot,bLoading} = this.props;
         return (
-            <div className="app">
-                <Header/>
+            <>
+                {bLoading && <Loading/>}
+                {bNav && <Header/>}
                 <Switch>
                     <Route path="/home" component={Home}/>
                     <Route path="/service" component={Service}/>
@@ -30,9 +57,27 @@ export default class App extends React.Component{
                     <Redirect exact from ="/" to="/home"/>
                     <Route  component={Error}/>
                 </Switch>
-                <Footer/>
-            </div>
+                {bFoot && <Footer {...this.props} />}
+
+            </>
         )
     }
 
 }
+
+const initMapStateToProps=state=>({
+  bNav:state.bNav,
+  bFoot:state.bFoot,
+  bLoading:state.bLoading,
+});
+
+const initMapDispatchToProps=dispatch=>({
+  viewNav:(bl)=>dispatch({type:'VIEW_NAV',payload:bl}),
+  viewFoot:(bl)=>dispatch({type:'VIEW_FOOT',payload:bl}),
+  viewLoading:(bl)=>dispatch({type:'VIEW_LOADING',payload:bl}),
+});
+
+export default connect(
+  initMapStateToProps,
+  initMapDispatchToProps
+)(App)
